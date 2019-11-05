@@ -1,4 +1,4 @@
-<div class="main">
+<div  [className]="showResult ? 'main_change' : 'main'">
       <!-- search box -->
         <div class="form-group has-search">
           <span class="fa fa-search form-control-feedback"></span>
@@ -6,5 +6,8 @@
           [taList]="myLocalList" placeholder="Search" [value]="searchKeyword"
           (taSelected)="selectedKeyword($event)">
         </div>
-
+</div>
+<div *ngIf="showResult">
+    <app-result-filter></app-result-filter>
+    <app-search-result></app-search-result>
 </div>

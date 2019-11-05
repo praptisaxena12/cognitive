@@ -12,9 +12,11 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
   public searchKeyword = '';
-  selectedKeyword(result) {
+  showResult:boolean = false;
+  selectedKeyword(result){
     this.searchKeyword = result;
     console.log(result);
+    this.showResult = true;
   }
   public myLocalList = [
     "Module not found: Error: Can't resolve 'ngx-typeahead' ",
