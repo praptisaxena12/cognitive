@@ -1,24 +1,21 @@
 <div class="searchResult">
     <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">Code</th>
-            <th scope="col">Name</th>
-          </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let item of collection | paginate: { itemsPerPage: 5, currentPage: p }">
+            <tbody>
+              <tr *ngFor="let item of collection | paginate: { itemsPerPage: 5, currentPage: p };let i = index">
                   <td>
                       {{collection.code}} 
                   </td>
-                  <td>
-                      {{collection.name}} 
+                  <td class="alignCenter">
+                      <div class="rating">
+                          <span [id]="i" [className]="favrouiteIconActive==i?'favrouiteStar':''" (click)="alert($event)">☆</span>
+                      </div> 
                   </td>
                 </tr>
             </tbody>
           </table>
     
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      <pagination-controls class="smallFont" (pageChange)="p = $event"></pagination-controls>
+
 <!-- <form>
         <table class="table table-striped">
                 <thead>

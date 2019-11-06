@@ -15,4 +15,5 @@ export class NavComponent implements OnInit {
   toggleSideNav(){
         document.getElementById("navbarSide").classList.toggle("change");
   }
+
 }

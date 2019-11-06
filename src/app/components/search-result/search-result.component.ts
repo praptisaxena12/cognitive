@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResultComponent implements OnInit {
   collection = [];
+  favrouiteIconActive:string = null;
   constructor(){
     for(let i=1;i<=25;i++){
-      let Obj = {'name': `Employee Name ${i}`,'code': `EMP00 ${i}`}
+      let Obj = {'name': `Employee Name ${i}`}
       this.collection.push(Obj);
     }
   }
@@ -17,6 +18,12 @@ export class SearchResultComponent implements OnInit {
   ngOnInit() {
   }
 
+  alert(result){
+    var idValue = result.target.id
+    alert(idValue);
+    console.log(result);
+    this.favrouiteIconActive = idValue;
+  }
   
  
 }
