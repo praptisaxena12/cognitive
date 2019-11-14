@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
     this.showResult = true;
   }
   public myLocalList = [
-    "Module not found: Error: Can't resolve 'ngx-typeahead' ",
+    "ngx-typeahead' ",
     "Sandwiches resolve",
     "French Fries",
     "Milks resolve hakes",

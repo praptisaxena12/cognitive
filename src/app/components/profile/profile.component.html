@@ -1,0 +1,36 @@
+<form class="form-inline profileButton"> 
+  <button class="navbar-toggler" type="button" (click)="toggleSideNav()">
+   <span class="fas fa-bars fa-1x"></span>
+  </button>
+</form>
+<!-- Side navigation list -->
+<ul class="nav" id="navbarSide">
+        <li class="navbar-side-header subHeader">
+          <div class="profilePanel">
+              Profile
+              <div class="fa fa-user fa-1x"></div>
+          </div>
+        </li>
+        <li class="navbar-side-header subHeader">
+                <span>Favorites</span>
+            <ul class="nav-list" >
+                <li class="navbar-side-item" *ngFor="let fav of favoritesItem| slice:0:listLimit; let i=index">
+                  <a href="#">{{fav.title}}</a>
+                </li>
+                <li class="navbar-side-item moreLess">
+                  <a href="#" *ngIf ="listLimit < favoritesItem.length" (click)="showMoreData()">
+                    More..
+                  </a>
+                  <a href="#" *ngIf ="listLimit > 4" (click)="showLessData()">
+                    ..Less
+                  </a>
+                </li> 
+            </ul>
+          </li>
+          <li class="navbar-side-header subHeader">
+            <span>Recents</span>
+          </li>
+      <li class="navbar-side-header subHeader">
+        <span>Trendings</span>
+      </li>
+</ul>

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CognitiveSearch';
+ 
+  // $(document).on('click',function(){
+  //   $('.collapse').collapse('hide');
+  // });
+
+  //document.getElementById("mainContainer").collapse('hide');
+
 }

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import { NgxTypeaheadModule } from 'ngx-typeahead';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ResultFilterComponent } from './components/result-filter/result-filter.component';
 import { Routes } from '@angular/router';
 import { SearchResultComponent } from './components/search-result/search-result.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: NavComponent },
@@ -24,14 +28,17 @@ const routes: Routes = [
     NavComponent,
     SearchComponent,
     ResultFilterComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgxTypeaheadModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
